@@ -6,10 +6,25 @@ public class Node : MonoBehaviour
 {
     public bool walkable;
     public Vector3 worldPosition;
+    public int gridX;
+    public int gridY;
 
-    public Node(bool walk, Vector3 worldPos)
+    public int gCost;
+    public int hCost;
+    public Node parent;
+    public Node(bool walk, Vector3 worldPos, int gridX, int gridY)
     {
         walkable = walk;
         worldPosition = worldPos;
+        this.gridX = gridX;
+        this.gridY = gridY;
+    }
+
+    public int fCost
+    {
+        get
+        {
+            return gCost + hCost;
+        }
     }
 }
