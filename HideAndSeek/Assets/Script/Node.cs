@@ -9,7 +9,7 @@ public class Node : MonoBehaviour
 
     public Node(bool walk, Vector3 worldPos)
     {
-        walkalbe = walk;
+        walkable = walk;
         worldPosition = worldPos;
     }
 }
